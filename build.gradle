@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         mavenCentral()
-        
     }
 }
 
@@ -12,8 +11,6 @@ apply plugin: 'eclipse'
 
 repositories {
     mavenCentral()
-    maven { url "https://oss.sonatype.org/content/repositories/releases" }
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
 }
 
 dependencies {
@@ -28,7 +25,6 @@ dependencies {
     testRuntime 'com.github.spullara.mustache.java:compiler:0.8.13'
     testRuntime 'net.java.dev.jna:jna:4.1.0'
 }
-
 
 task plugin(type: Zip) {
     from jar
