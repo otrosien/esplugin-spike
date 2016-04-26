@@ -29,6 +29,15 @@ dependencies {
     testRuntime 'net.java.dev.jna:jna:4.1.0'
 }
 
+
+task plugin(type: Zip) {
+    from jar
+    from('src/main/resources') {
+        include '*.properties'
+    }
+    into '/'
+}
+
 test {
     jvmArgs = ['-ea']
 //,'-esa', '-Xdebug', '-Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=y']
