@@ -1,14 +1,14 @@
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
+plugins {
+    id 'java'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile     'org.elasticsearch:elasticsearch:2.3.1'
-    compile     'org.apache.lucene:lucene-analyzers-phonetic:5.5.0'
+    compile 'org.elasticsearch:elasticsearch:2.3.1'
+    compile 'org.apache.lucene:lucene-analyzers-phonetic:5.5.0'
     testCompile 'org.apache.lucene:lucene-test-framework:5.5.0'
     testCompile group: 'org.elasticsearch', name: 'elasticsearch', version: '2.3.1', classifier: 'tests'
     testCompile 'junit:junit:4.12'
@@ -25,12 +25,4 @@ task plugin(type: Zip) {
         include '*.properties'
     }
     into '/'
-}
-
-test {
-    jvmArgs = ['-ea']
-//,'-esa', '-Xdebug', '-Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=y']
-    testLogging {
-        events 'passed', 'skipped', 'failed', 'standard_out', 'standard_error'
-    }
 }

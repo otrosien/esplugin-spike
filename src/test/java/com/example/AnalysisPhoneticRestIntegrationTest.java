@@ -11,7 +11,7 @@ import org.elasticsearch.test.rest.parser.RestTestParseException;
 import com.carrotsearch.randomizedtesting.annotations.Name;
 import com.carrotsearch.randomizedtesting.annotations.ParametersFactory;
 
-public class AnalysisPhoneticRestIT extends ESRestTestCase {
+public class AnalysisPhoneticRestIntegrationTest extends ESRestTestCase {
 
     @SuppressWarnings("unchecked")
     @Override
@@ -19,7 +19,7 @@ public class AnalysisPhoneticRestIT extends ESRestTestCase {
         return pluginList(AnalysisPhoneticPlugin.class);
     }
 
-    public AnalysisPhoneticRestIT(@Name("yaml") RestTestCandidate testCandidate) {
+    public AnalysisPhoneticRestIntegrationTest(@Name("yaml") RestTestCandidate testCandidate) {
         super(testCandidate);
     }
 
