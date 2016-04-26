@@ -1,0 +1,3 @@
+# Elasticsearch Plugin Spike
+
+WIP
