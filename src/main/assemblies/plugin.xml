@@ -15,4 +15,10 @@
             </excludes>
         </dependencySet>
     </dependencySets>
+    <files>
+      <file>
+        <source>src/main/resources/plugin-descriptor.properties</source>
+        <outputDirectory>/</outputDirectory>
+      </file>
+    </files>
 </assembly>
