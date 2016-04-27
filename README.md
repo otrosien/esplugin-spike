@@ -5,11 +5,12 @@
 ## Building
 
 `./mvnw clean install`
+
 `docker build -t epages/esplugin-spike .`
 
 ## Running
 
-`docker run --name esplugin-spike epages/esplugin-spike`
+`docker-compose up -d`
 
 ## Observations
 
