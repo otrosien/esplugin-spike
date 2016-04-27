@@ -1,0 +1,19 @@
+# E L A S T I C S E A R C H - D A T A ------------------------------------------
+elasticsearchdata:
+  image: busybox
+  command: /bin/true
+  volumes:
+    - /usr/share/elasticsearch/data
+
+# E L A S T I C S E A R C H ----------------------------------------------------
+elasticsearch:
+  build: .
+  hostname: elasticsearch
+  mem_limit: 512m
+  volumes_from:
+    - elasticsearchdata
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  command:
+    ["elasticsearch", "-Des.cluster.name=ng-productsearch", "-Des.node.name=ng-productsearch-master", "-Des.index.number_of_shards=1", "-Des.index.number_of_replicas=0"]
