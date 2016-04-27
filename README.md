@@ -6,7 +6,7 @@
 
 `./mvnw clean install`
 
-`docker build -t epages/esplugin-spike .`
+`docker-compose build`
 
 ## Running
 
